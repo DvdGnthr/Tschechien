@@ -1,0 +1,101 @@
+#searchInput {
+    background-color: rgb(255, 255, 255);
+    width: calc(100% - 40px); /* Default width for small screens */
+    max-width: 300px; /* Maximum width for small screens */
+    margin: 20px; /* Add margin around the input for spacing */
+    padding: 10px; /* Add padding for better touch experience */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the content */
+}
+
+#divA, #divB, #divC, #divD {
+    margin: 10px;
+    padding: 20px; /* General padding */
+    padding-top: 30px; /* Extra padding at the top */
+    padding-bottom: 30px; /* Extra padding at the bottom */
+    background-color: rgb(182, 143, 245);
+    border-style: solid;
+    border-radius: 2.2em;
+    border-width: 10px;
+    border-color: rgb(43, 43, 43);
+    width: calc(100% - 60px); /* Full width minus margins */
+    max-width: 300px; /* Set a maximum width */
+    color: rgb(129, 255, 238);
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Adding margin-bottom to divs inside divA, divB, divC, and divD */
+#divA div, #divB div, #divC div, #divD div {
+    margin-bottom: 10px;
+}
+
+#divA h1, #divB h1, #divC h1, #divD h1 {
+    text-align: center; /* Zentriere den Text horizontal */
+    margin-top: 0; /* Entferne den oberen Abstand des <h1>-Elements */
+}
+
+body {
+    font-family: Arial;
+    background-color: rgb(43, 43, 43);
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
+
+#unsichtbar{
+    color:rgb(182, 143, 245);
+}
+
+/* Custom style for the highlighted text */
+mark.highlight {
+    background-color: yellow;
+    color: inherit; /* Ensures the text color does not change */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 340px) {
+    #divA, #divB, #divC, #divD {
+        width: 50%; /* Breite auf 100% setzen, damit die Boxen die volle Bildschirmbreite einnehmen */
+        height: 50%;
+        margin: 10px 0; /* Einen vertikalen Abstand zwischen den Boxen hinzufügen */
+    }
+
+    #divA div, #divB div, #divC div, #divD div {
+        font-size: 0.6em; /* Adjust the font size as needed */
+    }
+    
+    #divA h1, #divB h1, #divC h1, #divD h1 {
+        font-size: 0.75em; /* Adjust the font size as needed */
+    }
+    
+    #searchInput {
+        width: calc(100% - 80px); /* Adjust search input width */
+        max-width: 200px; /* Increase max width for larger screens */
+    }
+}
+
+@media (min-width: 600px) {
+    #divA, #divB, #divC, #divD {
+        width: calc(50% - 40px); /* Adjust width for larger screens */
+    }
+
+    #searchInput {
+        width: calc(100% - 80px); /* Adjust search input width */
+        max-width: 500px; /* Increase max width for larger screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    #divA, #divB, #divC, #divD {
+        width: calc(25% - 40px); /* Adjust width for larger screens */
+    }
+
+    #searchInput {
+        width: calc(100% - 100px); /* Adjust search input width */
+        max-width: 700px; /* Increase max width for even larger screens */
+    }
+}
